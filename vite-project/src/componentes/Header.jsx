@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import mascote from "../assets/mascote.png";
-import playfunny from "../assets/playfunny.png"; // imagem da palavra "PlayFunny"
-import conta from "../assets/conta.png";
+import mascote from "../assets/imgs/LOGO.jpeg";
+import playfunny from "../assets/imgs/nomemarca.png";
+import conta from "../assets/imgs/imgcarrinho.png";
 
 function Header() {
   return (
@@ -13,10 +13,10 @@ function Header() {
           <img src={playfunny} alt="PlayFunny" className="h-14 w-80 object-contain" />
           <nav className="flex gap-6 text-sm">
             <span>Navegue por categoria:</span>
-            <Link to="/categoria/competitivo" className="hover:underline">Competitivo</Link>
-            <Link to="/categoria/cooperativo" className="hover:underline">Cooperativo</Link>
-            <Link to="/categoria/pra-galera" className="hover:underline">Pra galera</Link>
-            <Link to="/categoria/pra-familia" className="hover:underline">Pra família</Link>
+            <Link to="#competitivo" className="hover:underline">Competitivo</Link>
+            <Link to="#cooperativos" className="hover:underline">Cooperativo</Link>
+            <Link to="#pra-galera" className="hover:underline">Pra galera</Link>
+            <Link to="#pra-familia" className="hover:underline">Pra família</Link>
           </nav>
         </div>
 
