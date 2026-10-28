@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom";
 import mascote from "../assets/imgs/LOGO.jpeg";
 import playfunny from "../assets/imgs/nomemarca.png";
-import conta from "../assets/imgs/imgcarrinho.png";
+import carrinho from "../assets/imgs/meepleazul.jpg";
+import conta from "../assets/imgs/Magenta_meeple_character_waving_36124020.jpg";
 
 function Header() {
   return (
     <header className="bg-sky-100 py-4">
       <div className="flex items-center justify-between px-8">
-        <img src={mascote} alt="mascote PlayFunny" className="h-16 w-16 rounded-full object-cover" />
+        <img src={mascote} alt="mascote PlayFunny" className="h-30 w-30 rounded-full object-cover" />
 
         <div className="flex flex-col items-center gap-3">
-          <img src={playfunny} alt="PlayFunny" className="h-14 w-80 object-contain" />
-          <nav className="flex gap-6 text-sm">
+          <img src={playfunny} alt="PlayFunny" className="h-20 w-90 object-contain" />
+          <nav className="flex gap-6 text-base">
             <span>Navegue por categoria:</span>
             <Link to="#competitivo" className="hover:underline">Competitivo</Link>
             <Link to="#cooperativos" className="hover:underline">Cooperativo</Link>
@@ -20,10 +21,20 @@ function Header() {
           </nav>
         </div>
 
-        <Link to="/conta" className="flex flex-col items-center text-xs">
-          <img src={conta} alt="conta" className="h-14 w-14 rounded-full object-cover" />
-          <span>acesse a sua conta</span>
-        </Link>
+        <div className="flex items-center gap-8">
+          <Link to="/carrinho" className="flex flex-col items-center gap-1 text-base">
+            <img src={carrinho} alt="carrinho" className="h-14 w-14 rounded-full object-cover" />
+            <span>Carrinho</span>
+          </Link>
+
+
+          <Link to="/conta" className="flex flex-col items-center gap-1 text-base"> 
+          <img src={conta} alt="carrinho" className="h-14 w-14 rounded-full object-cover" />           
+            <span>Acesse sua conta</span>
+          </Link>
+
+          
+        </div>
       </div>
     </header>
   );
